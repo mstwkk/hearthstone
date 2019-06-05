@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body style="margin: 0; background-image: url(images/bg.jpg); background-size: 100% 100%; height: 754px;">
+<div class="enemy" style="height: 360px; text-align: center;"></div>
+<div class="player" style="height: 360px;"></div>
+<script>
+
+let enemy = document.querySelector(".enemy")
+let getRandom = function(){
+	let rand = Math.random()*4
+	let round = Math.round(rand)
+	return round
+}
+
+let createEnemyCard = function(arg){
+	for(let index = 0; index<arg; index = index + 1){
+		let img = document.createElement("img")
+		enemy.appendChild(img)
+		img.style.height = "200px"
+		img.style.width = "150px"
+		let array = [0,1,2,3,4,5,6,7,8,9,10]
+		img.src = "images/" + array + ".png"
+
+	}
+}
+
+
+
+
+</script>
+</body>
+</html>
